@@ -42,10 +42,15 @@ En sortie: [
 
  */
 
-function getFoodCategories(foods) {
+function getFoodCategories(food) {
+    return food.map(function(foods) {
+        if (foods.isVegetarian === true) {
+            return foods.food + " is suitable for vegetarians";
+        } else {
+            return foods.food + " is not suitable for vegetarians";
+        }
+    });
 }
-
-
 
 // Ne pas modifier l'export
 module.exports = getFoodCategories;

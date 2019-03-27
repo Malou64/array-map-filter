@@ -22,6 +22,9 @@ En sortie: [
  */
 
 function getStringsLength(strings) {
+    return strings.map((ingredients, i) => {
+        return ingredients + " contains " + ingredients.length + " characters";
+    });
 }
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
